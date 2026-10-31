@@ -12,7 +12,7 @@ public class ArcheryEventsMixin {
 
     @Inject(method = "handleArrowLooseEvent", at = @At("HEAD"), cancellable = true)
     private static void onHandleArrowLooseEvent(ArrowLooseEvent event, CallbackInfo ci) {
-        // 直接取消，使 CoFH 的原逻辑完全不执行
+
         ci.cancel();
     }
 }
