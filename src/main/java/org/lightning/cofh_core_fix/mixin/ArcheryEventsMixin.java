@@ -12,6 +12,7 @@ public class ArcheryEventsMixin {
 
     @Inject(method = "handleArrowLooseEvent", at = @At("HEAD"), cancellable = true)
     private static void onHandleArrowLooseEvent(ArrowLooseEvent event, CallbackInfo ci) {
+
         ci.cancel();
     }
 }
